@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="nhapso">Nhập số của bạn vào đây:</label>
+    <input type="number" id="nhapso">
+    <button type="button" onclick="change()">Chuyển đổi</button>
+    <p id="number"></p>
+    <script>
+        function change()  {
+            let n = parseInt(document.getElementById("nhapso").value);
+           if (n>0){
+             let reversednumber = 0
+           while (n>0) {
+            
+            let remainder = n % 10 ;
+            reversednumber = reversednumber * 10 + remainder ;
+            n = Math.floor(n/10);
+           }
+             document.getElementById("number").innerHTML = "Số đảo ngược số của bạn là: " + reversednumber }
+             else{ (n<0) 
+             document.getElementById("number").innerHTML = "Số không hợp lệ. Vui lòng nhập số nguyên dương.";
+            } }
+        
+    </script>
+</body>
+</html>
